@@ -1,0 +1,21 @@
+version: "3.4"
+
+services:
+  app-main:
+    build: .
+    environment:
+      APP_FILE_NAME: app-main
+      NUM_OF_THREADS: 5
+      LOG_LEVEL: DEBUG
+    ports:
+      - "8010:80"
+    depends_on:
+      - app-api
+
+  app-api:
+    build: .
+    environment:
+      APP_FILE_NAME: app-api
+      NUM_OF_THREADS: 5
+    ports:
+      - "8011:80"

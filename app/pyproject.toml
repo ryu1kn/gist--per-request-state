@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "gist--per-req-state"
+version = "0.1.0"
+description = ""
+authors = []
+packages = [{include = "lib"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+gunicorn = "^21.2.0"
+flask = {extras = ["async"], version = "^3.0.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
